@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y ansible
 
-COPY files/entrypoint.sh /entrypoint.sh
+COPY files/ /
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["ansible-playbook", "--version"]

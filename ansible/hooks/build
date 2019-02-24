@@ -8,6 +8,6 @@ env | sort
 
 docker build \
     --build-arg "$ARG_NAME=${!ARG_NAME}" \
-    -f $DOCKERFILE_PATH \
+    -f .$BUILD_PATH \
     -t $IMAGE_NAME \
     .

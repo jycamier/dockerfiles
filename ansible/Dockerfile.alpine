@@ -16,7 +16,7 @@ RUN set -ex \
         && apk del --no-cache .ansible-deps \
         && apk add --no-cache openssh-client
 
-COPY files/ /
+COPY alpinefiles/ /
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["ansible", "--version"]

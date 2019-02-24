@@ -50,3 +50,7 @@ Then :
 ```shell
 $ docker-compose run --rm ansible ansible-playbook -i hosts deploy.yml
 ``` 
+
+### Test with Molecule
+
+All images contain Molecule test tool (https://github.com/ansible/molecule/)

@@ -4,6 +4,7 @@ set -ex
 
 export ARG_NAME=$(echo $SOURCE_BRANCH | grep -oEi '[a-z_]+' | awk '{print toupper($0)}')
 export $ARG_NAME=$(echo $SOURCE_BRANCH | grep -oEi '[0-9.]+' | awk '{print $0 ".*"}')
+env | sort
 
 docker build \
     --build-arg "$ARG_NAME=${!ARG_NAME}" \
